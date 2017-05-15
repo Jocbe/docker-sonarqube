@@ -33,5 +33,6 @@ RUN set -x \
 VOLUME "$SONARQUBE_HOME/data"
 
 WORKDIR $SONARQUBE_HOME
+COPY RIPSQube-0.5-NIGHTLY.jar $SONARQUBE_HOME/extensions/plugins/
 COPY run.sh $SONARQUBE_HOME/bin/
 ENTRYPOINT ["./bin/run.sh"]
